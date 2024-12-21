@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article View</title>
+    <script type="module" src="/js/view.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/view.css" />
+  </head>
+  <body>
+    <header class="p-4 md:px-16 flex items-center gap-4 w-full">
+      <div class="flex-shrink-0">
+        <img
+          onclick="window.location.href = '/'"
+          src="/assets/logo/logo.png"
+          alt="logo"
+          class="w-12 h-12 md:w-16 md:h-16"
+        />
+      </div>
+      <form
+        id="searchForm"
+        class="flex-grow flex items-center"
+        action="/search"
+        method="GET"
+      >
+        <div class="relative w-full max-w-xl">
+          <input
+            type="search"
+            name="query"
+            id="search-input"
+            placeholder="Search Articles"
+            class="w-full h-12 px-4 rounded-full border border-gray-600 focus:outline-none focus:ring-1 bg-[#F2FFFA] text-xs focus:ring-green-500 shadow-sm"
+          />
+          <button
+            type="submit"
+            class="absolute right-1 top-1/2 transform -translate-y-1/2 bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 shadow-md"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </header>
+
+    <!-- Article Header Section -->
+    <section class="border-b border-gray-300 py-8 mx-4 md:mx-40 space-y-3">
+      <div class="flex items-center gap-2">
+        <!-- Author Image -->
+        <img
+          src=""
+          alt="Author Image"
+          class="w-10 h-10 rounded-full border border-gray-600"
+          id="authorImage"
+        />
+        <div>
+          <!-- Author Name -->
+          <p id="author" class="font-medium poppins"></p>
+          <!-- Date of Article -->
+          <p id="date" class="text-xs"></p>
+        </div>
+      </div>
+      <!-- Article Title -->
+      <h1 id="query" class="font-medium text-2xl poppins"></h1>
+    </section>
+
+    <!-- Full Article Content Section -->
+    <section class="my-10 mx-4 md:mx-auto space-y-10 md:w-[50%]">
+      <div id="fullNote" class="text-sm space-y-10">
+        <!-- Article Content will be dynamically inserted here by view.js -->
+        <p>Loading article content...</p>
+      </div>
+
+      <!-- Back to Search Results Button -->
+      <div class="">
+        <button
+          class="text-center text-sm text-green-600 w-full bg-white border border-2 border-green-600 rounded-full py-2"
+          onclick="window.history.back()"
+        >
+          Back to search results
+        </button>
+      </div>
+    </section>
+
+    <footer class="bg-black text-gray-100 px-6 md:px-40 py-14">
+      <div
+        class="flex items-center justify-between pb-10 border-b border-gray-900 border-1"
+      >
+        <div>
+          <img src="/assets/logo/logo.png" alt="" class="w-16" />
+        </div>
+
+        <div class="text-xl space-y-2">
+          <h2 class="text-3xl font-bold">Get social</h2>
+          <div class="flex items-center justify-between">
+            <i class="bx bxl-facebook-circle"></i>
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-tiktok"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <p class="text-sm">&copy; Copyright 2024. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

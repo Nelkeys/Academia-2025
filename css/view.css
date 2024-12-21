@@ -1,0 +1,28 @@
+@import url(/css/style.css) all;
+
+#fullNote {
+  font-family: "EB Garamond", serif;
+}
+#fullNote h1,
+#fullNote h2,
+#fullNote h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1b1b1b;
+  margin-bottom: 0.5em; /* Add spacing after header */
+}
+
+/* Paragraph and general text styles */
+#fullNote p {
+  margin-top: 1em !important;
+  font-size: 1.2rem; /* Increase readability */
+  line-height: 1.8; /* Better line spacing */
+  color: #1c1c1c; /* Slightly lighter color for text */
+}
+
+/* Style for unordered list */
+#fullNote ul {
+  margin-top: 1em !important;
+  list-style-type: disc;
+  margin-left: 2em;
+}

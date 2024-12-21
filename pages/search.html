@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .ai-stuff {
+        font-size: 60% !important;
+      }
+    </style>
+  </head>
+  <body class="">
+    <header class="p-4 md:px-16 flex items-center gap-4 w-full">
+      <div class="flex-shrink-0">
+        <img
+          onclick="window.location.href = '/'"
+          src="/assets/logo/logo.png"
+          alt="logo"
+          class="w-12 h-12 md:w-16 md:h-16"
+        />
+      </div>
+      <form
+        id="searchForm"
+        class="flex-grow flex items-center"
+        action="/search"
+        method="GET"
+      >
+        <div class="relative w-full max-w-xl">
+          <input
+            type="search"
+            name="query"
+            id="search-input"
+            placeholder="Machine Learning"
+            class="w-full h-12 px-4 rounded-full border border-gray-600 focus:outline-none focus:ring-1 bg-[#F2FFFA] text-xs focus:ring-green-500 shadow-sm"
+          />
+          <button
+            type="submit"
+            class="absolute right-1 top-1/2 transform -translate-y-1/2 bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 shadow-md"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </header>
+
+    <section
+      class="px-4 md:px-40 space-y-6 md:flex items-top gap-4 md:gap-10 lg:w-[90%] mt-8 ai-stuff"
+    >
+      <div class="space-y-2 md:w-[80%] md:border-b md:pb-5">
+        <div class="flex items-center gap-2">
+          <i class="bx bxs-magic-wand text-2xl text-red-600"></i>
+          <h2 class="font-normal bold text-xl">AI Overview</h2>
+          <!-- This title will be dynamically updated -->
+        </div>
+        <div>
+          <p class="text-sm text-gray-700" id="ai-feedback"></p>
+        </div>
+      </div>
+      <div
+        class="bg-[#DFF5FF] p-4 rounded-md flex items-center gap-2 justify-center flex-col h-40"
+      >
+        <i class="bx bxl-bitcoin text-3xl text-[#ffcc00]"></i>
+        <p class="font-bold open-sans">Today's Quote</p>
+        <p class="text-sm architect text-center">
+          Education is the passport to the future, for tomorrow belongs to those
+          who prepare for it today.
+        </p>
+      </div>
+    </section>
+
+    <section class="px-4 md:px-40 space-y-6 my-10">
+      <div id="results-container" class="md:w-[50%] space-y-10"></div>
+      <!-- Updated ID here -->
+    </section>
+
+    <footer class="bg-black text-gray-100 px-6 md:px-40 py-14 mt-32">
+      <div
+        class="flex items-center justify-between pb-10 border-b border-gray-900 border-1"
+      >
+        <div>
+          <img src="/assets/logo/logo.png" alt="" class="w-16" />
+        </div>
+
+        <div class="text-xl space-y-2">
+          <h2 class="text-3xl font-bold">Get social</h2>
+          <div class="flex items-center justify-between">
+            <i class="bx bxl-facebook-circle"></i>
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-tiktok"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <p class="text-sm">&copy; Copyright 2024. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/search.js"></script>
+    <script src="/js/ai.js" defer></script>
+  </body>
+</html>

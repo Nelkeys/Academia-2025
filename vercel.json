@@ -1,0 +1,13 @@
+{
+    "rewrites": [ 
+      {
+        "source": "/search",
+        "destination": "/pages/search.html"
+      },
+      {
+        "source": "/view",
+        "destination": "/pages/view.html"
+      }
+    ]
+  }
+  

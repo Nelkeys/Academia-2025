@@ -1,0 +1,14 @@
+{
+    "name": "gemini-integration",
+    "version": "1.0.0",
+    "description": "Integration with Gemini API",
+    "main": "api/fetchAIResponse.js",
+    "dependencies": {
+        "@google/generative-ai": "^0.21.0",
+        "dotenv": "^10.0.0",
+        "node-fetch": "^2.6.6"
+    },
+    "engines": {
+        "node": "16.x"
+    }
+}

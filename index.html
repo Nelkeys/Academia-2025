@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Academia</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 md:px-16">
+      <div>
+        <img
+          onclick="window.location.href = '/'"
+          src="/assets/logo/logo.png"
+          alt="logo"
+          class="w-12 h-12 md:w-16 md:h-16"
+        />
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="text-center mt-14 px-4">
+      <h1
+        class="text-2xl md:text-4xl md:text-5xl font-extrabold text-green-700 mb-4 architect"
+      >
+        LOREM IPSUM DOLOR<br />
+        SIT AMET
+      </h1>
+      <p class="text-gray-500 text-sm">
+        Lorem ipsum sit amet Lorem ipsum sit amet Lorem ipsum sit amet
+      </p>
+
+      <!-- Search Form -->
+      <form id="searchForm" class="mt-8 flex justify-center">
+        <div class="relative w-full max-w-2xl">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            class="w-full h-14 px-6 rounded-full border border-gray-600 text-xs focus:outline-none focus:ring-1 bg-green-50 focus:ring-green-500 shadow-sm"
+            placeholder="Search for topics..."
+          />
+          <button
+            type="submit"
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 shadow-md"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
+      <!-- Tags -->
+      <!-- <div class="flex flex-wrap justify-center space-x-3 mt-8">
+        <span
+          class="bg-gray-200 text-xs px-4 py-1 rounded-full cursor-pointer shadow-sm hover:bg-gray-300"
+        >
+          Artificial Intelligence
+        </span>
+        <span
+          class="bg-gray-200 text-xs px-4 py-1 rounded-full cursor-pointer shadow-sm hover:bg-gray-300"
+        >
+          AI
+        </span>
+        <span
+          class="bg-gray-200 text-xs px-4 py-1 rounded-full cursor-pointer shadow-sm hover:bg-gray-300"
+        >
+          Web Development
+        </span>
+        <span
+          class="bg-gray-200 text-xs px-4 py-1 rounded-full cursor-pointer shadow-sm hover:bg-gray-300"
+        >
+          ML
+        </span>
+      </div> -->
+    </main> 
+
+  
+    <footer class="mx-0 bg-black text-gray-100 px-6 md:px-40 py-14 mt-44">
+      <div
+        class="flex items-center justify-between pb-10 border-b border-gray-900 border-1"
+      >
+        <div>
+          <img src="/assets/logo/logo.png" alt="" class="w-16" />
+        </div>
+
+        <div class="text-xl space-y-2">
+          <h2 class="text-3xl font-bold">Get social</h2>
+          <div class="flex items-center justify-between">
+            <i class="bx bxl-facebook-circle"></i>
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-tiktok"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <p class="text-sm">&copy; Copyright 2024. All rights reserved.</p>
+      </div>
+    </footer>
+    
+
+    <script>
+      // Handle form submission
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+          const searchQuery = document.getElementById("search").value.trim();
+          if (searchQuery) {
+            // Redirect to the search page with the search query in the URL
+            window.location.href = `/search?query=${encodeURIComponent(
+              searchQuery
+            )}`;
+          }
+        });
+    </script>
+
+    
+  </body>
+</html>
